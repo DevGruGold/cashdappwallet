@@ -7,6 +7,8 @@ import { createWeb3Modal, defaultWagmiConfig } from '@web3modal/wagmi/react';
 import { WagmiConfig } from 'wagmi';
 import { arbitrum, mainnet } from 'viem/chains';
 import Index from "./pages/Index";
+import BuyCrypto from "./pages/BuyCrypto";
+import Bridge from "./pages/Bridge";
 
 const projectId = '6054bd6688c6860ed806775db1c24f15';
 
@@ -33,6 +35,8 @@ const App = () => (
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Index />} />
+            <Route path="/buy" element={<BuyCrypto />} />
+            <Route path="/bridge" element={<Bridge />} />
           </Routes>
         </BrowserRouter>
       </TooltipProvider>

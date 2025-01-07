@@ -2,9 +2,11 @@ import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useWeb3Modal } from "@web3modal/wagmi/react";
 import { ArrowLeftRight } from "lucide-react";
+import { useNavigate } from "react-router-dom";
 
 export const Onramper = () => {
   const { open } = useWeb3Modal();
+  const navigate = useNavigate();
 
   return (
     <Card className="p-6 bg-cashdapp-gray mt-6 animate-fade-in">
@@ -47,7 +49,10 @@ export const Onramper = () => {
               </button>
             </div>
 
-            <button className="w-full bg-cashdapp-green text-black font-semibold py-3 rounded-lg hover:opacity-90 transition-opacity">
+            <button 
+              onClick={() => navigate('/buy')}
+              className="w-full bg-cashdapp-green text-black font-semibold py-3 rounded-lg hover:opacity-90 transition-opacity"
+            >
               Continue Purchase
             </button>
           </div>
@@ -75,16 +80,10 @@ export const Onramper = () => {
               </button>
             </div>
 
-            <div className="bg-cashdapp-light-gray rounded-lg p-4">
-              <p className="text-sm text-gray-400 mb-2">Amount</p>
-              <input 
-                type="number" 
-                placeholder="0.00"
-                className="w-full bg-cashdapp-gray p-3 rounded-lg text-sm font-medium outline-none"
-              />
-            </div>
-
-            <button className="w-full bg-cashdapp-green text-black font-semibold py-3 rounded-lg hover:opacity-90 transition-opacity">
+            <button 
+              onClick={() => navigate('/bridge')}
+              className="w-full bg-cashdapp-green text-black font-semibold py-3 rounded-lg hover:opacity-90 transition-opacity"
+            >
               Start Bridge
             </button>
           </div>
