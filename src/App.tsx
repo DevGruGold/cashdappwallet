@@ -10,8 +10,8 @@ import Index from "./pages/Index";
 import BuyCrypto from "./pages/BuyCrypto";
 import Bridge from "./pages/Bridge";
 
+// Project configuration
 const projectId = '6054bd6688c6860ed806775db1c24f15';
-
 const metadata = {
   name: 'CashDapp',
   description: 'Web3 Financial Application',
@@ -19,29 +19,40 @@ const metadata = {
   icons: ['https://avatars.githubusercontent.com/u/37784886']
 };
 
+// Setup chains
 const chains = [mainnet, arbitrum];
-const wagmiConfig = defaultWagmiConfig({ chains, projectId, metadata });
 
+// Create wagmi config
+const wagmiConfig = defaultWagmiConfig({ 
+  chains, 
+  projectId, 
+  metadata 
+});
+
+// Initialize web3modal
 createWeb3Modal({ wagmiConfig, projectId, chains });
 
+// Create React Query client
 const queryClient = new QueryClient();
 
-const App = () => (
-  <WagmiConfig config={wagmiConfig}>
-    <QueryClientProvider client={queryClient}>
-      <TooltipProvider>
-        <Toaster />
-        <Sonner />
-        <BrowserRouter>
-          <Routes>
-            <Route path="/" element={<Index />} />
-            <Route path="/buy" element={<BuyCrypto />} />
-            <Route path="/bridge" element={<Bridge />} />
-          </Routes>
-        </BrowserRouter>
-      </TooltipProvider>
-    </QueryClientProvider>
-  </WagmiConfig>
-);
+const App = () => {
+  return (
+    <WagmiConfig config={wagmiConfig}>
+      <QueryClientProvider client={queryClient}>
+        <TooltipProvider>
+          <Toaster />
+          <Sonner />
+          <BrowserRouter>
+            <Routes>
+              <Route path="/" element={<Index />} />
+              <Route path="/buy" element={<BuyCrypto />} />
+              <Route path="/bridge" element={<Bridge />} />
+            </Routes>
+          </BrowserRouter>
+        </TooltipProvider>
+      </QueryClientProvider>
+    </WagmiConfig>
+  );
+};
 
 export default App;
