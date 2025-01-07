@@ -29,11 +29,11 @@ const wagmiConfig = defaultWagmiConfig({
   metadata,
 });
 
-// Initialize web3modal
-createWeb3Modal({ wagmiConfig, projectId, chains });
-
 // Create React Query client separately
 const queryClient = new QueryClient();
+
+// Initialize web3modal
+createWeb3Modal({ wagmiConfig, projectId, chains });
 
 const App = () => {
   return (
