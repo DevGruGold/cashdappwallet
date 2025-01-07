@@ -29,7 +29,7 @@ const wagmiConfig = defaultWagmiConfig({
   metadata,
 });
 
-// Initialize web3modal
+// Initialize web3modal before rendering the App component
 createWeb3Modal({ wagmiConfig, projectId, chains });
 
 // Create React Query client
