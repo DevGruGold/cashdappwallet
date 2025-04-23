@@ -26,7 +26,7 @@ export interface XMRT {
   }>;
 }
 
-// ABI (abbreviated for core functions)
+// ABI (abbreviated for core functions, expanded based on the full contract)
 export const XMRT_ABI = [
   // Basic ERC20 functions
   { inputs: [], name: "name", outputs: [{ internalType: "string", name: "", type: "string" }], stateMutability: "view", type: "function" },
@@ -53,7 +53,7 @@ export const XMRT_ABI = [
 
 // Contract configuration
 export const XMRT_CONTRACT_CONFIG = {
-  // Placeholder address - would be updated with actual deployed contract
+  // This would be the address of the deployed XMRT contract
   address: '0x0000000000000000000000000000000000000000' as Address,
   abi: XMRT_ABI,
 };

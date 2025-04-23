@@ -1,12 +1,13 @@
 
-import { useReadContract, useWriteContract, useAccount, useBlockNumber } from 'wagmi';
+import { useReadContract, useWriteContract, useAccount, useBlockNumber, useChainId } from 'wagmi';
 import { parseEther, formatEther } from 'viem';
 import { XMRT_CONTRACT_CONFIG } from '@/contracts/XMRTContract';
 import { toast } from '@/components/ui/use-toast';
 import { useEffect, useState } from 'react';
 
 export function useXMRTContract() {
-  const { address } = useAccount();
+  const { address, chainId: accountChainId } = useAccount();
+  const chainId = useChainId();
   const { data: blockNumber } = useBlockNumber({ watch: true });
   const [balance, setBalance] = useState<string>('0');
   
@@ -54,6 +55,8 @@ export function useXMRTContract() {
         functionName: 'wrapMonero',
         args: [amountWei],
         value: bridgeFee,
+        account: address,
+        chain: chainId,
       });
       
       toast({
@@ -79,6 +82,8 @@ export function useXMRTContract() {
         ...XMRT_CONTRACT_CONFIG,
         functionName: 'unwrapMonero',
         args: [amountWei],
+        account: address,
+        chain: chainId,
       });
       
       toast({
@@ -106,6 +111,8 @@ export function useXMRTContract() {
         functionName: 'onRampFiat',
         args: [amountWei],
         value: onRampFee,
+        account: address,
+        chain: chainId,
       });
       
       toast({
@@ -131,6 +138,8 @@ export function useXMRTContract() {
         ...XMRT_CONTRACT_CONFIG,
         functionName: 'offRampFiat',
         args: [amountWei],
+        account: address,
+        chain: chainId,
       });
       
       toast({
