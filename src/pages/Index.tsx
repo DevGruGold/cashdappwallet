@@ -1,7 +1,9 @@
+
 import { Header } from "@/components/Header";
 import { Balance } from "@/components/Balance";
 import { TransactionHistory } from "@/components/TransactionHistory";
 import { Onramper } from "@/components/Onramper";
+import { XMRTInteraction } from "@/components/XMRTInteraction";
 
 const Index = () => {
   return (
@@ -10,6 +12,7 @@ const Index = () => {
         <Header />
         <main className="py-6">
           <Balance />
+          <XMRTInteraction />
           <Onramper />
           <TransactionHistory />
         </main>

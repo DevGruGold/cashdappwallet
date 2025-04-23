@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -21,7 +22,7 @@ const metadata = {
 };
 
 // Setup chains
-const chains = [mainnet, arbitrum];
+const chains = [mainnet, arbitrum] as const;
 
 // Create wagmi config
 const config = createConfig({
@@ -39,7 +40,6 @@ const queryClient = new QueryClient();
 createWeb3Modal({
   wagmiConfig: config,
   projectId,
-  chains,
 });
 
 const App = () => {
