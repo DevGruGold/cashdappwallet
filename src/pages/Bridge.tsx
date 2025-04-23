@@ -19,60 +19,58 @@ const Bridge = () => {
   };
 
   return (
-    <div className="min-h-screen bg-black text-white">
-      <div className="container mx-auto px-4 max-w-2xl py-8">
-        <Button 
-          variant="ghost" 
-          onClick={() => navigate(-1)}
-          className="mb-6"
-        >
-          <ArrowLeft className="mr-2" />
-          Back
-        </Button>
+    <>
+      <Button 
+        variant="ghost" 
+        onClick={() => navigate(-1)}
+        className="mb-6"
+      >
+        <ArrowLeft className="mr-2" />
+        Back
+      </Button>
 
-        <Card className="p-6 bg-cashdapp-gray">
-          <h1 className="text-2xl font-bold mb-6">Bridge Assets</h1>
-          
-          <div className="space-y-6">
-            <div className="bg-cashdapp-light-gray rounded-lg p-4">
-              <p className="text-sm text-gray-400 mb-2">From Chain</p>
-              <button 
-                onClick={() => open({ view: 'Networks' })}
-                className="w-full bg-cashdapp-gray hover:bg-opacity-80 transition-colors p-3 rounded-lg text-sm font-medium text-left"
-              >
-                Select Source Chain
-              </button>
-            </div>
-
-            <div className="bg-cashdapp-light-gray rounded-lg p-4">
-              <p className="text-sm text-gray-400 mb-2">To Chain</p>
-              <button 
-                onClick={() => open({ view: 'Networks' })}
-                className="w-full bg-cashdapp-gray hover:bg-opacity-80 transition-colors p-3 rounded-lg text-sm font-medium text-left"
-              >
-                Select Destination Chain
-              </button>
-            </div>
-
-            <div className="bg-cashdapp-light-gray rounded-lg p-4">
-              <p className="text-sm text-gray-400 mb-2">Amount</p>
-              <input 
-                type="number" 
-                placeholder="Enter amount"
-                className="w-full bg-cashdapp-gray p-3 rounded-lg text-sm font-medium outline-none"
-              />
-            </div>
-
-            <Button 
-              onClick={handleBridge}
-              className="w-full bg-cashdapp-green text-black hover:bg-cashdapp-green/90"
+      <Card className="p-6 bg-cashdapp-gray">
+        <h1 className="text-2xl font-bold mb-6">Bridge Assets</h1>
+        
+        <div className="space-y-6">
+          <div className="bg-cashdapp-light-gray rounded-lg p-4">
+            <p className="text-sm text-gray-400 mb-2">From Chain</p>
+            <button 
+              onClick={() => open({ view: 'Networks' })}
+              className="w-full bg-cashdapp-gray hover:bg-opacity-80 transition-colors p-3 rounded-lg text-sm font-medium text-left"
             >
-              Start Bridge
-            </Button>
+              Select Source Chain
+            </button>
           </div>
-        </Card>
-      </div>
-    </div>
+
+          <div className="bg-cashdapp-light-gray rounded-lg p-4">
+            <p className="text-sm text-gray-400 mb-2">To Chain</p>
+            <button 
+              onClick={() => open({ view: 'Networks' })}
+              className="w-full bg-cashdapp-gray hover:bg-opacity-80 transition-colors p-3 rounded-lg text-sm font-medium text-left"
+            >
+              Select Destination Chain
+            </button>
+          </div>
+
+          <div className="bg-cashdapp-light-gray rounded-lg p-4">
+            <p className="text-sm text-gray-400 mb-2">Amount</p>
+            <input 
+              type="number" 
+              placeholder="Enter amount"
+              className="w-full bg-cashdapp-gray p-3 rounded-lg text-sm font-medium outline-none"
+            />
+          </div>
+
+          <Button 
+            onClick={handleBridge}
+            className="w-full bg-cashdapp-green text-black hover:bg-cashdapp-green/90"
+          >
+            Start Bridge
+          </Button>
+        </div>
+      </Card>
+    </>
   );
 };
 
