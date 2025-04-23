@@ -1,3 +1,4 @@
+
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -62,6 +63,10 @@ const App = () => {
               <Route
                 element={<Layout><Settings /></Layout>}
                 path="/settings"
+              />
+              <Route
+                element={<Layout><div>Profile Page (To be implemented)</div></Layout>}
+                path="/profile"
               />
             </Routes>
           </BrowserRouter>
