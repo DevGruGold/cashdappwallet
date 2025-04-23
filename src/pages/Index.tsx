@@ -4,6 +4,9 @@ import { Balance } from "@/components/Balance";
 import { TransactionHistory } from "@/components/TransactionHistory";
 import { Onramper } from "@/components/Onramper";
 import { XMRTInteraction } from "@/components/XMRTInteraction";
+import { UserToUserTransfer } from "@/components/UserToUserTransfer";
+import { ColdStorage } from "@/components/ColdStorage";
+import { Staking } from "@/components/Staking";
 
 const Index = () => {
   return (
@@ -13,6 +16,9 @@ const Index = () => {
         <main className="py-6">
           <Balance />
           <XMRTInteraction />
+          <UserToUserTransfer />
+          <ColdStorage />
+          <Staking />
           <Onramper />
           <TransactionHistory />
         </main>
