@@ -1,3 +1,5 @@
+
+import { Link } from "react-router-dom";
 import { Bell, Settings } from "lucide-react";
 
 export const Header = () => {
@@ -13,9 +15,13 @@ export const Header = () => {
         <button className="p-2 hover:bg-cashdapp-light-gray rounded-lg transition-colors">
           <Bell className="w-5 h-5" />
         </button>
-        <button className="p-2 hover:bg-cashdapp-light-gray rounded-lg transition-colors">
+        <Link
+          to="/settings"
+          className="p-2 hover:bg-cashdapp-light-gray rounded-lg transition-colors"
+          aria-label="Settings"
+        >
           <Settings className="w-5 h-5" />
-        </button>
+        </Link>
         <div className="w-10 h-10 bg-cashdapp-light-gray rounded-full"></div>
       </div>
     </header>

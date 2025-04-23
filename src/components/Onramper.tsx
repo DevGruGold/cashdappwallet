@@ -1,8 +1,9 @@
+
 import { Card } from "@/components/ui/card";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 import { useWeb3Modal } from "@web3modal/wagmi/react";
 import { ArrowLeftRight } from "lucide-react";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, Link } from "react-router-dom";
 
 export const Onramper = () => {
   const { open } = useWeb3Modal();
@@ -48,13 +49,12 @@ export const Onramper = () => {
                 Choose Token
               </button>
             </div>
-
-            <button 
-              onClick={() => navigate('/buy')}
-              className="w-full bg-cashdapp-green text-black font-semibold py-3 rounded-lg hover:opacity-90 transition-opacity"
+            <Link 
+              to="/buy"
+              className="w-full block bg-cashdapp-green text-black font-semibold py-3 rounded-lg hover:opacity-90 transition-opacity text-center"
             >
               Continue Purchase
-            </button>
+            </Link>
           </div>
         </TabsContent>
 
@@ -79,13 +79,12 @@ export const Onramper = () => {
                 Select Destination Chain
               </button>
             </div>
-
-            <button 
-              onClick={() => navigate('/bridge')}
-              className="w-full bg-cashdapp-green text-black font-semibold py-3 rounded-lg hover:opacity-90 transition-opacity"
+            <Link 
+              to="/bridge"
+              className="w-full block bg-cashdapp-green text-black font-semibold py-3 rounded-lg hover:opacity-90 transition-opacity text-center"
             >
               Start Bridge
-            </button>
+            </Link>
           </div>
         </TabsContent>
       </Tabs>

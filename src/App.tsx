@@ -1,4 +1,3 @@
-
 import { Toaster } from "@/components/ui/toaster";
 import { Toaster as Sonner } from "@/components/ui/sonner";
 import { TooltipProvider } from "@/components/ui/tooltip";
@@ -11,6 +10,7 @@ import { http } from 'viem';
 import Index from "./pages/Index";
 import BuyCrypto from "./pages/BuyCrypto";
 import Bridge from "./pages/Bridge";
+import Settings from "./pages/Settings";
 
 // Project configuration
 const projectId = '6054bd6688c6860ed806775db1c24f15';
@@ -54,6 +54,7 @@ const App = () => {
               <Route path="/" element={<Index />} />
               <Route path="/buy" element={<BuyCrypto />} />
               <Route path="/bridge" element={<Bridge />} />
+              <Route path="/settings" element={<Settings />} />
             </Routes>
           </BrowserRouter>
         </TooltipProvider>
