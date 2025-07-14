@@ -1,69 +1,38 @@
-# Welcome to your Lovable project
+# CashDapp Wallet
 
-## Project info
+This repository contains the source code for the CashDapp Wallet, a mobile-first application designed to facilitate the secure and private management of Monero (XMR) within the broader MobileMonero.com and XMRT DAO ecosystem.
 
-**URL**: https://lovable.dev/projects/c1d533b8-4483-4c0f-ac44-0e5a59b3934e
+## What is CashDapp Wallet?
 
-## How can I edit this code?
+The CashDapp Wallet serves as a user-friendly interface for interacting with the Monero blockchain, enabling users to send, receive, and manage their XMR holdings. While "CashDapp" is not a specific, named entity within the MobileMonero or XMRT DAO projects, this wallet embodies the spirit of a decentralized, cash-like mobile application for Monero. It aims to provide a seamless experience for users who wish to leverage Monero's privacy features in their daily transactions.
 
-There are several ways of editing your application.
+## Integration with MobileMonero.com
 
-**Use Lovable**
+MobileMonero.com is a crucial component of the XMRT DAO's economic model, focusing on mobile-based Monero mining. The CashDapp Wallet is designed to complement this by providing a robust and secure environment for users to manage the Monero they acquire, whether through mining on MobileMonero.com or other means. It acts as a personal vault for your mobile Monero assets.
 
-Simply visit the [Lovable Project](https://lovable.dev/projects/c1d533b8-4483-4c0f-ac44-0e5a59b3934e) and start prompting.
+## Role within the XMRT DAO Ecosystem
 
-Changes made via Lovable will be committed automatically to this repo.
+The XMRT DAO (Decentralized Autonomous Organization) is built around the Monero ecosystem, utilizing real-world Monero mining revenue to fund its operations and development. The XMRT tokens grant governance power over this treasury, allowing holders to participate in decision-making processes. The CashDapp Wallet, by enabling easy and secure Monero management, plays a vital role in empowering users to engage with the XMRT DAO. Users can hold their XMR, which is the underlying asset that fuels the DAO, and potentially interact with future features that allow for direct participation in XMRT DAO governance or related financial activities.
 
-**Use your preferred IDE**
+This wallet is built with a focus on privacy, security, and mobile accessibility, aligning with the core principles of Monero and the XMRT DAO's vision for a decentralized, privacy-first financial and governance system.
 
-If you want to work locally using your own IDE, you can clone this repo and push changes. Pushed changes will also be reflected in Lovable.
+## Features (Planned/Conceptual)
 
-The only requirement is having Node.js & npm installed - [install with nvm](https://github.com/nvm-sh/nvm#installing-and-updating)
+*   **Secure Monero Storage:** Robust cryptographic measures to protect user funds.
+*   **Send and Receive XMR:** Intuitive interface for conducting Monero transactions.
+*   **Transaction History:** Clear overview of past transactions.
+*   **Mobile-First Design:** Optimized for a smooth experience on smartphones and tablets.
+*   **Privacy-Focused:** Adherence to Monero's core privacy principles.
 
-Follow these steps:
+## Getting Started (Conceptual)
 
-```sh
-# Step 1: Clone the repository using the project's Git URL.
-git clone <YOUR_GIT_URL>
+Further instructions on how to set up, build, and use the CashDapp Wallet will be provided here.
 
-# Step 2: Navigate to the project directory.
-cd <YOUR_PROJECT_NAME>
+## Contribution
 
-# Step 3: Install the necessary dependencies.
-npm i
+We welcome contributions to the CashDapp Wallet project. Please refer to the `CONTRIBUTING.md` file for guidelines.
 
-# Step 4: Start the development server with auto-reloading and an instant preview.
-npm run dev
-```
+## License
 
-**Edit a file directly in GitHub**
+This project is licensed under the [License Name] - see the `LICENSE` file for details.
 
-- Navigate to the desired file(s).
-- Click the "Edit" button (pencil icon) at the top right of the file view.
-- Make your changes and commit the changes.
-
-**Use GitHub Codespaces**
-
-- Navigate to the main page of your repository.
-- Click on the "Code" button (green button) near the top right.
-- Select the "Codespaces" tab.
-- Click on "New codespace" to launch a new Codespace environment.
-- Edit files directly within the Codespace and commit and push your changes once you're done.
-
-## What technologies are used for this project?
-
-This project is built with .
-
-- Vite
-- TypeScript
-- React
-- shadcn-ui
-- Tailwind CSS
-
-## How can I deploy this project?
-
-Simply open [Lovable](https://lovable.dev/projects/c1d533b8-4483-4c0f-ac44-0e5a59b3934e) and click on Share -> Publish.
-
-## I want to use a custom domain - is that possible?
-
-We don't support custom domains (yet). If you want to deploy your project under your own domain then we recommend using Netlify. Visit our docs for more details: [Custom domains](https://docs.lovable.dev/tips-tricks/custom-domain/)
